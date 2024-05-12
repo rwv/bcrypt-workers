@@ -1,6 +1,6 @@
 import { OpenAPIRouter } from "@cloudflare/itty-router-openapi";
-import { Hash } from "endpoints/hash";
-import { Verify } from "endpoints/verify";
+import { Hash } from "./endpoints/hash";
+import { Verify } from "./endpoints/verify";
 
 export const router = OpenAPIRouter({
   docs_url: "/",
