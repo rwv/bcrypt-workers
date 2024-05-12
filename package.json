@@ -1,5 +1,5 @@
 {
-	"name": "cloudflare-workers-openapi",
+	"name": "bcrypt-workers",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
