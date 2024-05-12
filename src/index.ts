@@ -4,6 +4,7 @@ import { TaskDelete } from "./endpoints/taskDelete";
 import { TaskFetch } from "./endpoints/taskFetch";
 import { TaskList } from "./endpoints/taskList";
 import { Hash } from "endpoints/hash";
+import { Verify } from "endpoints/verify";
 
 export const router = OpenAPIRouter({
 	docs_url: "/",
@@ -14,6 +15,7 @@ router.post("/api/tasks/", TaskCreate);
 router.get("/api/tasks/:taskSlug/", TaskFetch);
 router.delete("/api/tasks/:taskSlug/", TaskDelete);
 router.post("/hash", Hash);
+router.post("/verify", Verify);
 
 // 404 for everything else
 router.all("*", () =>

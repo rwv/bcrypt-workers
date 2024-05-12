@@ -11,4 +11,4 @@ export const Task = {
 
 export const Password = new Str({ required: true, example: "password"})
 export const Rounds = new Num({ default: 10, required: false, example: 10})
-export const Hash = new Str({ example: "$2a$12$eij28zBQqlU570pb2/otT.u997D8HqSYxvOFuHyZndJVXEGn3jhAu"})
+export const Hash = new Str({ example: "$2a$10$0AeRIW6lLG4Nz5uCLItonuasTNdScKoLzBX9hIzIII371CxBcwYrO"})
