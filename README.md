@@ -9,6 +9,8 @@ This is a Cloudflare Workers project that provides a simple API to hash and comp
 
 ## Usage
 
+OpenAPI Documentation: https://bcrypt-workers.rwv.dev/
+
 ### Hash a password
 
 ```javascript
