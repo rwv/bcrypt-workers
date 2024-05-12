@@ -1,25 +1,50 @@
-# Cloudflare Workers OpenAPI 3.1
+# bcrypt-workers
 
-This is a Cloudflare Worker with OpenAPI 3.1 using [itty-router-openapi](https://github.com/cloudflare/itty-router-openapi).
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/rwv/bcrypt-workers/deploy.yml)
 
-This is an example project made to be used as a quick start into building OpenAPI compliant Workers that generates the
-`openapi.json` schema automatically from code and validates the incoming request to the defined parameters or request body.
 
-## Get started
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/rwv/bcrypt-workers)
 
-1. Sign up for [Cloudflare Workers](https://workers.dev). The free tier is more than enough for most use cases.
-2. Clone this project and install dependencies with `npm install`
-3. Run `wrangler login` to login to your Cloudflare account in wrangler
-4. Run `wrangler deploy` to publish the API to Cloudflare Workers
+This is a Cloudflare Workers project that provides a simple API to hash and compare passwords using bcrypt.
 
-## Project structure
+## Usage
 
-1. Your main router is defined in `src/index.ts`.
-2. Each endpoint has its own file in `src/endpoints/`.
-3. For more information read the [itty-router-openapi official documentation](https://cloudflare.github.io/itty-router-openapi/).
+### Hash a password
+
+```javascript
+fetch("/hash", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    password: "password",
+    rounds: 12,
+  }),
+})
+```
+
+### Compare a password
+
+```javascript
+fetch("/compare", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    password: "password",
+    hash: "$2a$10$0AeRIW6lLG4Nz5uCLItonuasTNdScKoLzBX9hIzIII371CxBcwYrO",
+  }),
+})
+```
 
 ## Development
 
-1. Run `wrangler dev` to start a local instance of the API.
-2. Open `http://localhost:9000/` in your browser to see the Swagger interface where you can try the endpoints.
-3. Changes made in the `src/` folder will automatically trigger the server to reload, you only need to refresh the Swagger interface.
+```
+$ pnpm run dev
+```
+
+## License
+
+MIT
