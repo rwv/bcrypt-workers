@@ -27,10 +27,10 @@ fetch("/hash", {
 })
 ```
 
-### Compare a password
+### Verify a password
 
 ```javascript
-fetch("/compare", {
+fetch("/verify", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
