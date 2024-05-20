@@ -39,5 +39,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: TypeScript Check
+        run: pnpm run type-check
+
+      - name: ESLint
+        run: pnpm run lint
+
       - name: Test Worker
         run: pnpm test
