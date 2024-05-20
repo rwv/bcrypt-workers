@@ -9,7 +9,8 @@
 		"start": "wrangler dev",
 		"cf-typegen": "wrangler types",
 		"test": "vitest",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
 		"@cloudflare/itty-router-openapi": "^1.0.1",
