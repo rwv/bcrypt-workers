@@ -30,9 +30,14 @@ export class Hash extends OpenAPIRoute {
 
   async handle(
     request: Request,
-    env: any,
-    context: any,
-    data: Record<string, any>
+    env: Env,
+    context: ExecutionContext,
+    data: {
+      body: {
+        password: string;
+        rounds: number;
+      };
+    }
   ) {
     const { password, rounds } = data.body;
 

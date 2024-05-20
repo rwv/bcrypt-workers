@@ -30,9 +30,14 @@ export class Verify extends OpenAPIRoute {
 
   async handle(
     request: Request,
-    env: any,
-    context: any,
-    data: Record<string, any>
+    env: Env,
+    context: ExecutionContext,
+    data: {
+      body: {
+        password: string;
+        hash: string;
+      };
+    }
   ) {
     const { password, hash } = data.body;
 
