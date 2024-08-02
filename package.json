@@ -17,7 +17,7 @@
 		"bcrypt-edge": "0.0.6"
 	},
 	"devDependencies": {
-		"@cloudflare/vitest-pool-workers": "^0.4.16",
+		"@cloudflare/vitest-pool-workers": "^0.4.17",
 		"@cloudflare/workers-types": "^4.20240729.0",
 		"@eslint/js": "^9.8.0",
 		"@types/node": "^22.0.2",
