@@ -24,7 +24,7 @@
 		"@types/service-worker-mock": "^2.0.1",
 		"eslint": "^8.57.0",
 		"typescript": "^5.5.4",
-		"typescript-eslint": "^7.18.0",
+		"typescript-eslint": "^8.0.1",
 		"vitest": "1.3.0",
 		"wrangler": "^3.70.0"
 	}
